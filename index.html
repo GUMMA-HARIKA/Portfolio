@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./../CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <header >
+        <div class="logo">
+            <a href="./index.html"><h2 >Harika</h2></a>
+            <i class="ri-menu-line" id="menuToggle"></i>
+        </div>
+        <nav>
+            <a class="navItem" href="./index.html">About</a>
+            <a class="navItem" href="#skills">Skills</a>
+            <a class="navItem" href="#projects">Projects</a>
+            <a class="contact-btn" href="./HTML/contact.html" target="_blank">Contact</a>
+            </div>
+        </nav>
+   </header> 
+
+   <section class="main">
+        <div class="image">
+            <img src="../ASSETS/image.png" alt="image"><br>
+        </div>
+        <div class="info">
+            <p>Hey! I'm <strong>Harika</strong> </p>
+            <p class="desc">Aspiring MERN Stack Developer </p>
+            <span>I am a third-year B.Tech CSE student at Geethanjali Institute of Science & Technology, Kovur, passionate about web development and problem-solving.</span>
+            <div class="media">
+                <a href="https://www.linkedin.com/in/gumma-harika/" target="_blank"><i class="ri-linkedin-box-fill">&nbsp;</i></a>
+                <a href="https://github.com/GUMMA-HARIKA" target="_blank"><i class="ri-github-fill">&nbsp;</i></a>
+                <a href="mailto:harikagumma2911@gmail.com" target="_blank"><i class="ri-mail-fill">&nbsp;</i></a>
+                
+            </div>
+        </div>
+    
+   </section>
+
+   <h1>Skills</h1>
+
+   <section id="skills">
+        <div class="skill frontEnd">
+            <div class="end">
+                <img src="../ASSETS/frontend.png" width="50px" alt="image">
+                <span>&nbsp;Frontend  Development</span>
+            </div>
+            <dl>
+                <dd>HTML, CSS, Java Script</dd>
+            </dl>
+
+        </div>
+
+        
+        <div class="skill backEnd">
+            <div class="end">
+                <img src="../ASSETS/backend.png" width="50px" alt="image">
+                <span>&nbsp;backend  Development</span>
+            </div>
+            <dl>
+                <dd>Java, Python, C Programming </dd>
+            </dl>
+            
+        </div>
+        <div class="skill frontEnd">
+            <div class="end">
+                <img src="../ASSETS/frontend.png" width="50px" alt="image">
+                <span>&nbsp;Database Management</span>
+            </div>
+            <dl>
+                <dd>MongoDB</dd>
+            </dl>
+
+        </div>
+
+   </section>
+
+   <h1>Projects</h1>
+
+   <section id="projects">
+        <div class="card">
+            <div class="item">
+                <h2>Student Details Management System</h2>
+                <p>This project allows you to store the student details.</p>
+                <button class="contact" onclick="window.location.href='https://www.linkedin.com/in/gumma-harika/'">Link</button>
+                <button class="contact" onclick="window.location.href='https://github.com/GUMMA-HARIKA'">Github</button>   
+            </div>
+
+            <div class="projectImage">
+                <img src="../ASSETS/img.jpg" width="300px" alt="image">
+            </div>
+        </div>
+
+        <div class="viewMore"><a href="./HTML/about.html" target="_blank"><p>View More</p></a></div>
+   </section>
+   
+  <footer><p>&copy; 2025 Harika | All rights reserved</p></footer>
+
+  <script>
+    const menuIcon = document.getElementById('menuToggle');
+    const nav = document.querySelector('nav');
+
+    menuIcon.addEventListener('click', () => {
+        nav.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
