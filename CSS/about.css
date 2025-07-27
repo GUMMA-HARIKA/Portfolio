@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    background-color: black;
+ 
+}
+
+header{
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: black;
+    top: 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+
+
+nav a{
+    text-decoration: none;
+    color: brown;
+    font-size: 1.75rem;
+    position: relative;
+}
+nav a::before{
+    position: absolute;
+    content: "";
+    bottom:-3px;
+    left: 0;
+    width:0%;
+    border-radius: 50%;
+    height: 3px;
+    background-color: white;
+    transition: 0.1s linear;
+}
+nav a:hover::before{
+    width:100%;
+}
+
+
+.logo h2 {
+    font-size: 3.5rem;
+    padding-left: 5rem;
+    font-family: Dancing Script;
+    color: white;
+   
+}
+.logo a{
+    text-decoration: none;
+}
+
+.container{
+    margin: 40px auto;
+    padding: 2rem;
+    height: 250px;
+    width:80vw;
+    background-color: black;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    position: relative;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.container::after, .container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient( from var(--angle), transparent 25%, blue );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 10px;
+    animation: 3s spin  linear infinite;
+    animation-timing-function: linear;
+}
+
+.container::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+from{
+    --angle: 0deg;
+}
+to{
+    --angle: 360deg;
+}
+}
+footer{
+    width:100vw;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    color: white;
+}
+/* 
+footer{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom:0;
+} */
+ 
+main .container .item{
+    height: 100%;
+    width: 60%;
+    /* border: 2px solid yellow; */
+}
+
+main .container .video{
+    height: 100%;
+    width: 40%;
+    /* background: url(./ASSETS/image.png); */
+    
+
+    /* border: 2px solid yellow; */
+}
+main .container .video video{
+    width: 100%;
+    /* z-index: 100; */
+    height: 100%;
+    
+}
+    
+.contact-btn {
+border-radius: 10px;
+height: 2.5rem;
+border: none;
+font-size: 1.4rem;
+padding: 0px  10px;
+
+}
+.contact-btn:hover{
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+@media (max-width:580px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        height: auto;
+    }
+    main .container .video{
+        width:100%;
+        order:5
+    }
+
+    main .container .item{
+        width: 90%;
+    }
+}
